@@ -1,0 +1,13 @@
+<h1>Comandas</h1>
+
+<div class="card-deck">
+  <div class="card bg-light mb-3" style="max-width: 18rem;" *ngFor="let comanda of comandas">
+    <div class="card-header">Comanda {{comanda.id}}</div>
+    <div class="card-body">
+      <h5 class="card-title">ABERTA</h5>
+      <p class="card-text">{{comanda.data}}</p>
+      <p class="card-text">Cliente: {{comanda.cliente.nome}}</p>      
+      <a [routerLink]="['/comanda']" class="btn btn-outline-primary">Visualizar itens...</a>
+      
+    </div>  
+</div>

@@ -1,0 +1,29 @@
+
+
+<h1>Cliente: {{comanda.cliente.nome}}</h1> 
+<h2>DATA: {{comanda.data}}</h2> 
+<h2>STATUS: ABERTA</h2> 
+<h2>GARCOM: {{comanda.garcom.nome}}</h2> 
+<hr>
+
+
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th scope="col">CODIGO</th>
+      <th scope="col">PRODUTO</th>
+      <th scope="col">QUANTIDADE</th>
+      <th scope="col">VALOR</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+    <tr *ngFor="let itens of itensComanda">
+      <th scope="row">{{itens.id}}</th>
+      <td>{{itens.produto.nome}}</td>
+      <td>{{itens.quantidade}}</td>
+      <td>{{itens.produto.valor}}</td>
+    </tr>
+    
+  </tbody>
+</table>
